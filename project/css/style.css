@@ -1,0 +1,342 @@
+/**
+ * Generic Styles
+ **/
+
+ html {
+  --primary-color: #273469;
+  --background-color: #708090;
+  --background-color-dark: #9B9BFF;
+  --background-color-light: #D6CEE8;
+
+  background: var(--background-color);
+  background-position: top left;
+  font-family: 'Merriweather', serif;
+  height: 100vh;
+  font-size: 2vw;
+}
+
+body {
+  max-width: 90vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--background-color-light);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+input,select, button {
+ font-family: Arial,Helvetica,sans-serif;
+ font-size: 2vw;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.logo{
+  height: 5vw;
+  width:auto;
+  display:block;
+  margin: auto;
+}
+
+header h1{
+  font-size:2.5vw;
+}
+
+span{
+  margin:auto;
+  padding: 1vw;
+}
+
+#patientInfoDisplay,#entrance{
+  background-color: var(--background-color-light);
+  border-radius: 0.4vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+#passwordChangeForm{
+  padding: 2vw;
+}
+
+/**
+ * Header
+ **/
+
+ header input[type=text],header input[type=password], select, textarea {
+  max-width: 90vw;
+}
+
+body > header {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: var(--background-color-dark);
+  border-bottom: 1vh solid #30343F;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  max-width: 90vw;
+}
+
+body > header form.login {
+  display: grid;
+  padding-left: 35vw;
+  margin:auto;
+}
+
+body > header form.logout{
+  align-self: flex-end;
+  align-items: center;
+  grid-column-gap: 0.1vw;
+  margin: auto;
+}
+
+body > header .message {
+  text-align: center;
+  background-color: #3792cb;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  color: black;
+  grid-column-end: span 3;
+}
+
+header ul {
+    list-style-type: none;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 4vw;
+    margin-right: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+header li {
+  float: left;
+}
+
+header li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 1vh 1vw;
+  text-decoration: none;
+}
+
+header li a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+header li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0vw 1vw 1vw 0vw rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1vw;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/**
+ * Main Section
+ **/
+
+body > section {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+/**
+ * Footer
+ **/
+
+body > footer {
+  background-color: var(--background-color-dark);
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-top: 1vh solid #30343F;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+body>footer p{
+  width: 50vw;
+  margin: 1vw 0;
+}
+
+/**
+ * Forms
+ **/
+form.login>input[type=text],form.login>input[type=password], select, textarea {
+  width: 20vw;
+  height: 5vh;
+  padding: 0.1vw 0.5vw;
+  border: 0.1vw solid #9B9BFF;
+  border-radius: 0.4vw;
+}
+
+input[type=text], select, textarea {
+  width: 80vw;
+  height: 5vh;
+  padding: 0.1vw 0.5vw;
+  border: 0.1vw solid #9B9BFF;
+  border-radius: 0.4vw;
+}
+
+input[type=date],input[type=number], select, textarea {
+  width: 15vw;
+  height: 5vh;
+  padding: 0.1vw 0.5vw;
+  border: 0.1vw solid #9B9BFF;
+  border-radius: 0.4vw;
+}
+
+header input[type=submit],button {
+  float:right;
+  margin-right:10vw;
+}
+
+input[type=submit],button {
+  background-color: #1E2749;
+  color: white;
+  padding: 1vh 2vh;
+  border: none;
+  border-radius: 0.4vw;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=radio]{
+  width:2vw;
+  height:2vw;
+}
+
+label {
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  display: inline-block;
+  width: 30vw;
+}
+
+#register {
+  background-color: var(--background-color-light);
+  border-radius: 0.4vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+/*
+  Tables
+*/
+#uploadbutton{
+  margin-left:5vw;
+}
+
+#uploadbutton,button{
+  padding: 1vh 2vh;
+}
+
+table {
+  background-color: var(--background-color-light);
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: center;
+  border-spacing: 1vw;
+  height: 1vw;
+}
+
+/*
+  visitor Modal
+*/
+
+/* The Modal (background) */
+.visitorModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 1vh; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.visitorModal-content {
+  background-color: #E4D9FF;
+  margin: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 10vh;
+  border: 0.1vw solid #888;
+  width: 80vw;
+  height: 80vh;
+  font-size: 3.5vh;
+}
+
+.visitorModal-content form input[type=text]{
+  height:4vh;
+  width:60vw;
+}
+
+.visitorModal-content form input[type=number]
+.visitorModal-content form input[type=date]{
+  height:4vh;
+  width:10vw;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-weight: bold;
+  font-size: 4vw;
+  padding-top: 2vh;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
